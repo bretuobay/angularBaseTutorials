@@ -22,6 +22,18 @@ app.config(function($routeProvider) {
          templateUrl : "partials/_admin.html",
           controller : "pagesController"
     })
+    .when("/jobs-search", {
+         templateUrl : "partials/_jobsearch.html",
+          controller : "pagesController"
+    })
+    .when("/jobs-applied-for", {
+         templateUrl : "partials/_jobsappliedfor.html",
+          controller : "pagesController"
+    })
+    .when("/resume-management", {
+         templateUrl : "partials/_resumemanagement.html",
+          controller : "pagesController"
+    })
     .when("/top-jobs", {
          templateUrl : "partials/_topjobs.html",
           controller : "pagesController"
