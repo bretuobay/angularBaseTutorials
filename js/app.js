@@ -15,7 +15,11 @@ app.config(function($routeProvider) {
           controller : "pagesController"
     })
     .when("/logout", {
-        templateUrl : "partials/_logout.html",
+        templateUrl : "partials/_main.html",// after logout go to main
+          controller : "pagesController"
+    })
+    .when("/jobs-portal", {
+         templateUrl : "partials/_admin.html",
           controller : "pagesController"
     })
     .when("/top-jobs", {
