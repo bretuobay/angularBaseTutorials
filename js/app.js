@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ["ngRoute"]);
+var app = angular.module('AwesomeJobs', ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -23,19 +23,19 @@ app.config(function($routeProvider) {
           controller : "pagesController"
     })
     .when("/jobs-search", {
-         templateUrl : "partials/_jobsearch.html",
+         templateUrl : "partials/_job_search.html",
           controller : "pagesController"
     })
     .when("/jobs-applied-for", {
-         templateUrl : "partials/_jobsappliedfor.html",
+         templateUrl : "partials/_jobs_applied_for.html",
           controller : "pagesController"
     })
     .when("/resume-management", {
-         templateUrl : "partials/_resumemanagement.html",
+         templateUrl : "partials/_resume_management.html",
           controller : "pagesController"
     })
     .when("/top-jobs", {
-         templateUrl : "partials/_topjobs.html",
+         templateUrl : "partials/_top_jobs.html",
           controller : "pagesController"
     }).when("/job/94838",{
        templateUrl : "partials/_job.html",
