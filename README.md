@@ -49,3 +49,17 @@ To run on localhost server check out this link :
  http-server -o
 
  ```
+
+
+ To run angular front end test suite using protractor
+
+ ```
+ npm install -g protractor
+
+ webdriver-manager update
+
+ webdriver-manager start
+ 
+ protractor conf.js
+
+ ```
