@@ -26,3 +26,68 @@ describe('#Nav Element Check', function() {
   });
 
 });
+
+
+describe('#Login Page Inputs Check', function() {
+
+  it('should visit login page and verify existence of inputs and submit button',function(){
+    browser.get('http://localhost:8080/#/login');
+    element.all(by.css('.wrapper input')).then(function(inputs) {
+      expect(inputs.length).toBe(2);
+      expect(inputs[0].getTagName()).toBe('input');
+      expect(inputs[1].getTagName()).toBe('input');
+
+      // here the tags have names and hence we verify with the attribute names
+      expect(inputs[0].getAttribute('name')).toBe('email');
+      expect(inputs[1].getAttribute('name')).toBe('password');
+      //console.log(inputs)
+      //expect(inputs[0].email).toBeDefined();
+    //  expect(element(by.css('person.name')).isPresent()).toBe(true);
+    });
+
+  });
+
+  it('should find a submit button on the login page',function(){
+    browser.get('http://localhost:8080/#/login');
+    element.all(by.css('.wrapper button')).then(function(button) {
+      expect(button.length).toBe(1);
+      expect(button[0].getTagName()).toBe('button');
+      expect(button[0].getText()).toBe('Login');
+      });
+  });
+
+});
+
+
+
+describe('#Register  Page Inputs Check', function() {
+
+
+
+  it('should visit register page and verify existence of inputs and submit button',function(){
+      browser.get('http://localhost:8080/#/register');
+    element.all(by.css('.wrapper input')).then(function(inputs) {
+      expect(inputs.length).toBe(3);
+      expect(inputs[0].getTagName()).toBe('input');
+      expect(inputs[1].getTagName()).toBe('input');
+      expect(inputs[2].getTagName()).toBe('input');
+
+      // Here we verify the type
+      expect(inputs[0].getAttribute('type')).toBe('email');
+      expect(inputs[1].getAttribute('type')).toBe('password');
+      expect(inputs[2].getAttribute('type')).toBe('password');
+    });
+
+  });
+
+
+  it('should find a submit button on the register page',function(){
+    browser.get('http://localhost:8080/#/register');
+    element.all(by.css('.wrapper button')).then(function(button) {
+      expect(button.length).toBe(1);
+      expect(button[0].getTagName()).toBe('button');
+      expect(button[0].getText()).toBe('Register');
+      });
+  });
+
+});
