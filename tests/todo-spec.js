@@ -1,6 +1,12 @@
 
+describe('#AwesomeJobs App Testing Suite', function() {
 
-
+/*
+TODO : Separate test for different pages so , we vist each page only once
+  beforeEach(function () {
+    browser.get('/#/login');
+  });
+*/
 describe('#Page Title Check', function() {
   it('should have a title', function() {
     browser.get('http://127.0.0.1:8080/');
@@ -89,5 +95,7 @@ describe('#Register  Page Inputs Check', function() {
       expect(button[0].getText()).toBe('Register');
       });
   });
+
+});
 
 });
