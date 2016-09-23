@@ -8,37 +8,37 @@ app.config(function($routeProvider) {
     })
     .when("/register", {
         templateUrl : "partials/_register.html",
-          controller : "pagesController"
+          controller : "AuthController"
     })
     .when("/login", {
         templateUrl : "partials/_login.html",
-          controller : "pagesController"
+          controller : "AuthController"
     })
     .when("/logout", {
         templateUrl : "partials/_main.html",// after logout go to main
-          controller : "pagesController"
+          controller : "AuthController"
     })
     .when("/jobs-portal", {
          templateUrl : "partials/_admin.html",
-          controller : "pagesController"
+          controller : "JobController"
     })
     .when("/jobs-search", {
          templateUrl : "partials/_job_search.html",
-          controller : "pagesController"
+          controller : "JobController"
     })
     .when("/jobs-applied-for", {
          templateUrl : "partials/_jobs_applied_for.html",
-          controller : "pagesController"
+          controller : "JobController"
     })
     .when("/resume-management", {
          templateUrl : "partials/_resume_management.html",
-          controller : "pagesController"
+          controller : "JobController"
     })
     .when("/top-jobs", {
          templateUrl : "partials/_top_jobs.html",
-          controller : "pagesController"
+          controller : "JobController"
     }).when("/job/94838",{
        templateUrl : "partials/_job.html",
-       controller : "pagesController"
+       controller : "JobController"
     });
 });

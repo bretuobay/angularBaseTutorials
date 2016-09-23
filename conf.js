@@ -8,5 +8,5 @@ exports.config = {
        http://stackoverflow.com/questions/20059943/running-into-error-while-waiting-for-protractor-to-sync-with-the-page-with-basic
   */
   rootElement: '.main-app',
-  specs: ['tests/todo-spec.js']
+  specs: ['tests/mainsuite.js']
 };
